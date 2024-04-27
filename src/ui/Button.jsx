@@ -34,6 +34,8 @@ function Button({ children, disabled, to, type, onClick }) {
   );
 }
 
+export default Button;
+
 Button.propTypes = {
   children: PropTypes.node.isRequired, // Can be any React element or node
   disabled: PropTypes.bool, // Optional boolean prop
@@ -41,5 +43,3 @@ Button.propTypes = {
   type: PropTypes.string, // Optional boolean prop
   onClick: PropTypes.func.isRequired, // Function prop, required
 };
-
-export default Button;
