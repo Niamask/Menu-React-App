@@ -1,15 +1,18 @@
 import { formatCurrency } from '../../utils/helpers';
 import PropTypes from 'prop-types';
+import DeleteItem from '../cart/DeleteItem';
 import Button from './../../ui/Button';
-import { useSelector } from 'react-redux';
+import UpdateItemQuantity from '../cart/UpdateItemQuantity';
+
+import { useSelector, useDispatch } from 'react-redux';
 import { addItem, getCurrentQuantityById } from '../cart/cartSlice';
-import { useDispatch } from 'react-redux';
 
 function MenuItem({ pizza }) {
   const dispatch = useDispatch();
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
 
   const currentQuantity = useSelector(getCurrentQuantityById(id));
+  // console.log(currentQuantity);
   const isInCart = currentQuantity > 0;
 
   function handleAddToCart() {
@@ -29,20 +32,30 @@ function MenuItem({ pizza }) {
       <img
         src={imageUrl}
         alt={name}
-        className={`h-24  ${soldOut ? 'opacity-70 grayscale' : ''}`}
+        className={`h-24 ${soldOut ? 'opacity-70 grayscale' : ''}`}
       />
-      <div className="flex grow flex-col  pt-0.5">
+      <div className="flex grow flex-col pt-0.5">
         <p className="font-medium">{name}</p>
         <p className="text-sm capitalize italic text-stone-500">
           {ingredients.join(', ')}
         </p>
-        <div className="mt-auto flex  items-center justify-between">
+        <div className="mt-auto flex items-center justify-between">
           {!soldOut ? (
             <p className="text-sm">{formatCurrency(unitPrice)}</p>
           ) : (
             <p className="text-sm font-medium uppercase text-stone-500">
               Sold out
             </p>
+          )}
+
+          {isInCart && (
+            <div className="flex items-center gap-3 sm:gap-8">
+              <UpdateItemQuantity
+                pizzaId={id}
+                currentQuantity={currentQuantity}
+              />
+              <DeleteItem pizzaId={id} />
+            </div>
           )}
 
           {!soldOut && !isInCart && (
