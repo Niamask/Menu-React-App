@@ -7,6 +7,7 @@ import { clearCart, getCart, getTotalCartPrice } from '../cart/cartSlice';
 import store from '../../store';
 import { formatCurrency } from '../../utils/helpers';
 import { useState } from 'react';
+// import { useDispatch } from 'react-redux';
 // import { fetchAddress } from '../user/userSlice';
 
 // https://uibakery.io/regex-library/phone-number
@@ -18,10 +19,12 @@ const isValidPhone = (str) =>
 function CreateOrder() {
   const [withPriority, setWithPriority] = useState(false);
   const username = useSelector((state) => state.user.username);
+
   const navigation = useNavigation();
   const isSubmitting = navigation.state === 'submitting';
 
   const formErrors = useActionData();
+  // const dispatch = useDispatch();
 
   const cart = useSelector(getCart);
   console.log(cart);
