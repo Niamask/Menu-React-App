@@ -14,14 +14,14 @@ def after_request(response):
 
 @app.route("/")
 def hello_world():
-    return "Hello, World!"
+    return "Hello, Customers!"
 
 
-recipes = [
+dishes = [
     {
       "id": 1,
       "name": "Meat And Prune Tagine",
-      "unitPrice": 18,
+      "unitPrice": 12,
       "imageUrl": "https://img.cuisineaz.com/660x660/2013/12/20/i29276-tajine-de-veau-aux-pruneaux.jpeg",
       "ingredients": [
         "beef",
@@ -33,16 +33,18 @@ recipes = [
     },
     {
       "id": 2,
-      "name": "Chicken Tagine With Olives",
-      "unitPrice": 14,
-      "imageUrl": "https://www.cuisinonsencouleurs.fr/wp-content/uploads/2021/07/tajine-poulet-frites-15-scaled.jpg",
+      "name": "Meatball Tagine And Eggs",
+      "unitPrice": 16,
+      "imageUrl": "https://tasteofmaroc.com/wp-content/uploads/2018/02/kefta-tagine-oysy-bigstock-kofta-tajine-kefta-tagine-mo-65105917.jpg",
       "ingredients": [
-        "Chicken",
-        "Red Olive",
+        "beef",
         "Onion",
-        "French Fried Potatoe",
+        "Fresh Herbs",
+        "Tomatoe",
+        "Garlic",
+        "Eggs"
       ],
-      "soldOut": False
+      "soldOut": True
     },
     {
       "id": 3,
@@ -60,23 +62,21 @@ recipes = [
     },
     {
       "id": 4,
-      "name": "Meatball Tagine And Eggs",
+      "name": "Chicken Tagine With Olives",
       "unitPrice": 16,
-      "imageUrl": "https://tasteofmaroc.com/wp-content/uploads/2018/02/kefta-tagine-oysy-bigstock-kofta-tajine-kefta-tagine-mo-65105917.jpg",
+      "imageUrl": "https://www.cuisinonsencouleurs.fr/wp-content/uploads/2021/07/tajine-poulet-frites-15-scaled.jpg",
       "ingredients": [
-        "beef",
+        "Chicken",
+        "Red Olive",
         "Onion",
-        "Fresh Herbs",
-        "Tomatoe",
-        "Garlic",
-        "Eggs"
+        "French Fried Potatoe",
       ],
-      "soldOut": True
+      "soldOut": False
     },
     {
       "id": 5,
       "name": "Vegetarian Chickpea Tagine",
-      "unitPrice": 12,
+      "unitPrice": 16,
       "imageUrl": "https://www.myweekendkitchen.in/wp-content/uploads/2019/09/moroccan_tagine_vegetarian.jpg",
       "ingredients": [
         "chickpea",
@@ -90,7 +90,7 @@ recipes = [
     {
       "id": 6,
       "name": "Veggies Tagine",
-      "unitPrice": 11,
+      "unitPrice": 13,
       "imageUrl": "https://fitmencook.com/wp-content/uploads/2020/10/moroccan-chicken-tagine-5.jpg",
       "ingredients": [
         "Onion",
@@ -118,7 +118,7 @@ recipes = [
     {
       "id": 8,
       "name": "Kefta Tagine",
-      "unitPrice": 15,
+      "unitPrice": 16,
       "imageUrl": "https://pommedambre.com/app/uploads/2021/04/tajine-boeuf-boulettes_38320782-scaled.jpeg",
       "ingredients": [
         "beef",
@@ -131,7 +131,7 @@ recipes = [
     {
       "id": 9,
       "name": "Whiting Meatball Tagine",
-      "unitPrice": 16,
+      "unitPrice": 14,
       "imageUrl": "https://verygoodrecipes.com/images/blogs/couscous-and-pudding/moroccan-fish-tagine-with-green-olives-72.640x480.jpg",
       "ingredients": [
         "Whiting",
@@ -145,7 +145,7 @@ recipes = [
     {
       "id": 10,
       "name": "Pil Pil Tagine",
-      "unitPrice": 13,
+      "unitPrice": 15,
       "imageUrl": "https://cache.marieclaire.fr/data/photo/w1000_ci/6k/recette-tajine-crevettes-pil-pil.jpg",
       "ingredients": [
         "Shrimp",
@@ -159,7 +159,7 @@ recipes = [
     {
       "id": 11,
       "name": "Sardine Tagine",
-      "unitPrice": 10,
+      "unitPrice": 15,
       "imageUrl": "https://www.la-cuisine-marocaine.com/photos-recettes/tajine-sardines-marocaine.jpg",
       "ingredients": [
         "Sardine",
@@ -172,7 +172,7 @@ recipes = [
     {
       "id": 12,
       "name": "Mussel Tagine",
-      "unitPrice": 11,
+      "unitPrice": 16,
       "imageUrl": "https://recettespecial.com/wp-content/uploads/2015/12/Tajine-de-moules-%C3%A0-la-marocaine-1-1.jpg",
       "ingredients": [
         "Mussel",
@@ -185,21 +185,21 @@ recipes = [
     },
     {
       "id": 13,
-      "name": "Eggs Tagine",
-      "unitPrice": 6,
-      "imageUrl": "https://www.thedeliciouscrescent.com/wp-content/uploads/2017/11/Moroccon-Eggs-Square.jpg",
+      "name": "Cauliflower Tagine",
+      "unitPrice": 12,
+      "imageUrl": "https://i.ytimg.com/vi/VUXucp28KoI/maxresdefault.jpg",
       "ingredients": [
-        "Eggs",
-        "tomato",
-        "Garlic",
-        "Fresh herbs",
+        "Cauliflower",
+        "Onion",
+        "Garlic"
+        "Olive",
       ],
-      "soldOut": False
+      "soldOut": True
     },
     {
       "id": 14,
       "name": "kebda Tagine",
-      "unitPrice": 15,
+      "unitPrice": 16,
       "imageUrl": "https://pbs.twimg.com/media/FZF8L35WIAEmuT5.jpg",
       "ingredients": [
         "beef liver",
@@ -212,7 +212,7 @@ recipes = [
     {
       "id": 15,
       "name": "Lamb Tagine With Quince",
-      "unitPrice": 17,
+      "unitPrice": 16,
       "imageUrl": "https://www.deliciousmagazine.co.uk/wp-content/uploads/2018/07/603321-1-eng-GB_lamb-and-quince-tagine-with-chermoula-and-buttered-couscous-768x960.jpg",
       "ingredients": [
         "Lamb",
@@ -227,7 +227,7 @@ recipes = [
     {
       "id": 16,
       "name": "Okra Tagine",
-      "unitPrice": 12,
+      "unitPrice": 15,
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiBOAaLnS2iRO3gp2Yy3TYfJ3Mz-xP8xIRJgpz-EOo8w&s",
       "ingredients": [
         "Okra",
@@ -237,19 +237,20 @@ recipes = [
       ],
       "soldOut": False
     },
-    {
+   {
       "id": 17,
-      "name": "Cauliflower Tagine",
-      "unitPrice": 12,
-      "imageUrl": "https://i.ytimg.com/vi/VUXucp28KoI/maxresdefault.jpg",
+      "name": "Eggs Tagine",
+      "unitPrice": 15,
+      "imageUrl": "https://www.thedeliciouscrescent.com/wp-content/uploads/2017/11/Moroccon-Eggs-Square.jpg",
       "ingredients": [
-        "Cauliflower",
-        "Onion",
-        "Garlic"
-        "Olive",
+        "Eggs",
+        "tomato",
+        "Garlic",
+        "Fresh herbs",
       ],
-      "soldOut": True
+      "soldOut": False
     },
+
     {
       "id": 18,
       "name": "Apricot Chicken Tagine",
@@ -267,64 +268,51 @@ recipes = [
   
   ]
 
-# get 3 different recipes
-@app.route("/recipes")
-def get_recipes():
-    return jsonify(recipes)
+tajines = ["Meat And Prune Tagine", "Chicken Tagine With Olives", "Fish Tagine and Veggies", "Meatball Tagine And Eggs", "Vegetarian Chickpea Tagine", "Veggies Tagine", "Artichokes Tagine", "Kefta Tagine" ,  "Whiting Meatball Tagine", "Pil Pil Tagine", "Sardine Tagine", "Mussel Tagine", "Eggs Tagine", "kebda Tagine", "Lamb Tagine With Quince", "Okra Tagine", "Cauliflower Tagine", "Apricot Chicken Tagine"]
+EXTERNAL_API_URL = "https://react-fast-pizza-api.onrender.com/api/order"
 
-all_recipes = {
+all_dishes = {
     "status":'success',
-    "data": recipes
+    "data": dishes
 }
 
-@app.route("/all_recipes")
-def get_x():
-    return jsonify(all_recipes)
+@app.route("/all_dishes")
+def get_menu():
+    return jsonify(all_dishes)
 
-# get 3 different recipes
+# Order 18 different dishes
 @app.route("/order", methods=['POST'])
 def create_order():
-    EXTERNAL_API_URL = "https://react-fast-pizza-api.onrender.com/api/order"
+    # EXTERNAL_API_URL = "https://react-fast-pizza-api.onrender.com/api/order"
     data = request.get_json()
     response = requests.post(EXTERNAL_API_URL, json=data)
-    tajines = ["Meat and prune tagine","Chicken tagine with olives", "tajine z"]
     myResponse = response.json()
     for item in myResponse["data"]["cart"]:
-        print(item)
-        print(item["pizzaId"])
-        print(tajines[item["pizzaId"]-1])
+        # print(item)
+        # print(item["pizzaId"])
+        # print(tajines[item["pizzaId"]-1])
         item["name"] = tajines[item["pizzaId"]-1]
         
-
-    print("the response is : ", myResponse)
+    # print("the response is : ", myResponse)
     return jsonify(myResponse)
 
-# get 3 different recipes
+# get order by id
 @app.route("/order/<string:id>")
 def get_order(id):
     API = "https://react-fast-pizza-api.onrender.com/api/order/"
     EXTERNAL_API_URL = f"{API}{id}"
     response = requests.get(EXTERNAL_API_URL)
-    tajines = ["Meat and prune tagine","Chicken tagine with olives", "tajine z"]
     myResponse = response.json()
     for item in myResponse["data"]["cart"]:
-         print(item)
-         print(item["pizzaId"])
-         print(tajines[item["pizzaId"]-1])
+        #  print(item)
+        #  print(item["pizzaId"])
+        #  print(tajines[item["pizzaId"]-1])
          item["name"] = tajines[item["pizzaId"]-1]
         
 
     print("the get response is : ", myResponse)
     return jsonify(myResponse)
 
-
-@app.route("/all_recipes/<string:id>")
-def get_recipesId(id):
-    recipe = next((recipe for recipe in recipes if recipe["id"] == id), None)
-    if recipe:
-        return jsonify(recipe)
-    else:
-        return jsonify({"error": "Recipe not found"}), 404
 
 if __name__ == "__main__":
     app.run(debug=True)
