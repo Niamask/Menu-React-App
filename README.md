@@ -1,8 +1,35 @@
-# React + Vite
+# Tajine & Co.
+Tajine & Co. is a web application that allows you to conveniently order authentic Moroccan Tajines directly to your doorstep.  Savor the rich flavors and fragrant spices of these traditional stews from the comfort of your home.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Content
+* [Overview](#Overview)
+* [Built With](#Built-With)
+* [Contributing](#Contributing)
+* [Author](#Author)
+* [License](#License)
 
-Currently, two official plugins are available:
+## Overview
+This project is a React application showcasing delicious and authentic Moroccan Tajine recipes, built with modern web development technologies.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Built-With
+* Frontend (React App):
+    - React.
+    - JavaScript (ES6+)
+    - HTML5
+    - Tailwind CSS
+* Backend (API):
+    - Flask 
+
+## Contributing
+We welcome contributions! Please follow these steps:
+
+  1. Fork the repository.
+  2. Create a new branch for your changes.
+  3. Make your changes and commit them with clear messages.
+  4. Push your branch to your fork.
+  5. Create a pull request.
+
+## Author
+Niama SKAY - [Github](https://github.com/Niamask) / [Twitter](https://twitter.com/NiamaSky)
+
+## Bon Appétit!
