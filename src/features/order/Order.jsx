@@ -95,15 +95,16 @@ function Order() {
 
       <div className="space-y-2 bg-stone-200 px-6 py-5">
         <p className="text-sm font-medium text-stone-600">
-          Price tajine: {formatCurrency(orderPrice)}
+          Price tajine: {formatCurrency(orderPrice * 10)}
         </p>
         {priority && (
           <p className="text-sm font-medium text-stone-600">
-            Price priority: {formatCurrency(priorityPrice)}
+            Price priority: {formatCurrency(priorityPrice * 10)}
           </p>
         )}
         <p className="font-bold">
-          To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}
+          To pay on delivery:{' '}
+          {formatCurrency((orderPrice + priorityPrice) * 10)}
         </p>
       </div>
     </div>

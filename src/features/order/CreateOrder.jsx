@@ -100,7 +100,7 @@ function CreateOrder() {
           <Button disabled={isSubmitting} type="primary">
             {isSubmitting
               ? 'Placing order....'
-              : `Order now from ${formatCurrency(totalPrice)}`}
+              : `Order now from ${formatCurrency(totalPrice * 10)}`}
           </Button>
         </div>
       </Form>

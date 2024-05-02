@@ -10,7 +10,7 @@ function OrderItem({ item }) {
         <p>
           <span className="font-bold">{quantity}&times;</span> {name}
         </p>
-        <p className="font-bold">{formatCurrency(totalPrice)}</p>
+        <p className="font-bold">{formatCurrency(totalPrice * 10)}</p>
       </div>
     </li>
   );
