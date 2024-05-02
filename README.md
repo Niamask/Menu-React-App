@@ -41,8 +41,8 @@ This project is a React application showcasing delicious and authentic Moroccan 
 
 ### Clone the Repository
 
-    git clone https://github.com/your-username/tajine-and-co.git
-    cd tajine-and-co
+    git clone https://github.com/Niamask/Menu-React-App.git
+    cd Menu-React-App
 
 ### Install Dependencies
 
