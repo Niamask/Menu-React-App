@@ -1,6 +1,12 @@
 # Tajine & Co.
 Tajine & Co. is a web application that allows you to conveniently order authentic Moroccan Tajines directly to your doorstep. Savor the rich flavors and fragrant spices of these traditional stews from the comfort of your home.
 
+![Alt text](Tajine&Co-home-page.png)
+![Alt text](Tajine&Co-menu-page.png)
+![Alt text](Tajine&Co-cart-page.png)
+![Alt text](Tajine&Co-new-order-page.png)
+![Alt text](Tajine&Co-order-page.png)
+
 ## Table of Content
 * [Overview](#Overview)
 * [Features](#Features)
