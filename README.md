@@ -11,6 +11,7 @@ Tajine & Co. is a web application that allows you to conveniently order authenti
 * [Overview](#Overview)
 * [Features](#Features)
 * [Built With](#Built-With)
+* [Architecture](#Architecture)
 * [Setup Instructions](#Setup-Instructions)
 * [Contributing](#Contributing)
 * [Author](#Author)
@@ -37,6 +38,9 @@ This project is a React application showcasing delicious and authentic Moroccan 
     - Tailwind CSS
 * Backend (API):
     - Flask
+ 
+## Architecture
+![Alt text](Architecture.png)
 
 ## Setup Instructions
 
