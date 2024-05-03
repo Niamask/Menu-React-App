@@ -6,12 +6,12 @@ function Home() {
   const username = useSelector((state) => state.user.username);
 
   return (
-    <div className="my-10 px-4 text-center sm:my-16">
-      <h1 className="mb-8  text-xl font-semibold md:text-3xl">
-        The best pizza.
+    <div className="my-10  px-4 text-center sm:my-16">
+      <h1 className="mb-8  text-xl font-semibold text-violet-950 md:text-3xl">
+        The best tajines.
         <br />
-        <span className="text-yellow-500">
-          Straight out of the oven, straight to you.
+        <span className="text-orange-300">
+          Unlock the magic of Morocco with Tajine Time!
         </span>
       </h1>
 
